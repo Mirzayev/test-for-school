@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "my_result": "Natijalarim",
+    "rating": "Reyting",
+    "quiz": "Testlar",
+    "mathematics": "Matematika",
+    "physics": "Fizika",
+    "mother_tongue": "Ona tili",
+    "history": "Tarix",
+    "about": "Haqida",
+    "setting": "Sozlamalar",
+    "help": "Yordam",
+    "news": "Yangiliklar",
+    "logout": "Chiqish",
+    "test-solving" : "Test yechish"
+  },
+  "my_result": {
+    "my_result": "Natijalarim",
+    "date": "Vaqti",
+    "math_score" : "Matematika",
+    "physic"  :  "Fizika",
+    "tongue_score" : "Ona tili ",
+    "place" : "O'rin",
+    "history" : "Tarix",
+    "all_student" : "Hamma o'quvchilar",
+    "name": "Ism-sharif"
+  }
+}

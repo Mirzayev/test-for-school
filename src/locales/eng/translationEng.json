@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "my_result": "My Result",
+    "rating": "Rating",
+    "quiz": "Quiz",
+    "mathematics": "Mathematics",
+    "physics": "Physics",
+    "mother_tongue": "Mother Tongue",
+    "history": "History",
+    "about": "About",
+    "setting": "Settings",
+    "help": "Help",
+    "news": "News",
+    "logout": "Logout",
+    "test-solving":  "Test Solving"
+  },
+   "my_result": {
+     "my_result": "My result",
+     "math_score" : "Mathematics",
+     "physic" : "Physic",
+     "tongue_score" : "Mother tongue",
+     "place" : "Place",
+     "history" : "History",
+     "all_student" : "All Student",
+     "name": "Name"
+   }
+
+}
