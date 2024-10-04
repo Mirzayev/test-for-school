@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
-import Logo from 'src/assets/images/Logo.jpg';
+// import Logo from 'src/assets/images/Logo.jpg';
 import {
     SignalFilled,
     TrophyFilled,
@@ -69,7 +69,7 @@ const Home = () => {
             >
                 <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
                     <div style={{padding: '16px', textAlign: 'center'}}>
-                        <img src={Logo} alt="Logo" style={{width: '100%', height: 'auto'}}/>
+                        <img src='https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2667690/header.jpg?t=1725007623' alt="Logo" style={{width: '100%', height: 'auto'}}/>
                     </div>
                     <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items}/>
                 </Sider>
