@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
-import Logo from '../../assets/images/logo.jpg';
+import Logo from 'src/assets/images/Logo.jpg';
 import {
     SignalFilled,
     TrophyFilled,
