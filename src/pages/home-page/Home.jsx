@@ -11,7 +11,7 @@ import {
     FileProtectOutlined,
     LogoutOutlined,
 } from '@ant-design/icons';
-import {Breadcrumb, Layout, Menu, theme} from 'antd';
+import { Layout, Menu, theme} from 'antd';
 import MyResult from "../../components/my-result/MyResult.jsx";
 import Rating from "../../components/rating/Rating.jsx";
 import About from "../../components/about/About.jsx";
@@ -36,7 +36,7 @@ function getItem(label, key, icon, children, path) {
 const Home = () => {
 
 
-    const {t, i18n} = useTranslation()
+    const {t} = useTranslation()
 
     const items = [
         getItem(t('menu.my_result'), '1', <TrophyFilled/>, null, "/"),
