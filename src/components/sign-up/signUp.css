@@ -1,0 +1,70 @@
+.register-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    animation: backgroundChange 10s infinite alternate;
+}
+
+.form-container {
+    max-width: 400px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-bottom: 2px solid #66a6ff;
+    outline: none;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #66a6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #89f7fe;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes backgroundChange {
+    0% { background: linear-gradient(120deg, #89f7fe, #66a6ff); }
+    100% { background: linear-gradient(120deg, #f6d365, #fda085); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

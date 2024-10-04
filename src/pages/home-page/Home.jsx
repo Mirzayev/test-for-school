@@ -21,6 +21,7 @@ import Setting from "../../components/setting/Setting.jsx";
 import News from "../../components/news/News.jsx";
 import {useTranslation} from "react-i18next";
 
+
 const {Header, Content, Footer, Sider} = Layout;
 
 function getItem(label, key, icon, children, path) {
