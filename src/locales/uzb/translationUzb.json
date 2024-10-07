@@ -12,7 +12,8 @@
     "help": "Yordam",
     "news": "Yangiliklar",
     "logout": "Chiqish",
-    "test-solving" : "Test yechish"
+    "test-solving" : "Test yechish",
+    "createTest" : "Test yaratish"
   },
   "my_result": {
     "my_result": "Natijalarim",

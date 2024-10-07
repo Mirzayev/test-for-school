@@ -12,7 +12,8 @@
     "help": "Help",
     "news": "News",
     "logout": "Logout",
-    "test-solving":  "Test Solving"
+    "test-solving":  "Test Solving",
+    "createTest" : "Create test"
   },
    "my_result": {
      "my_result": "My result",
