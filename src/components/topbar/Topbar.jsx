@@ -26,7 +26,7 @@ export default function Topbar() {
         <div className={'flex relative z-50 items-center justify-between  lg:px-10  px-4'}>
 
             <div>
-                <h3 className={'text-[20px] font-semibold'}>{t('menu.test-solving')}</h3>
+                <h3 className={'text-[20px] font-semibold hidden md:block'}>{t('menu.test-solving')}</h3>
             </div>
 
             <div className={'flex items-center gap-5 relative'}>

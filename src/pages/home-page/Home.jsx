@@ -61,7 +61,7 @@ const Home = () => {
     const handleCancel = () => {
         setVisible(false); // Modalni yopish
     };
-
+  
     const items = [
         getItem(t('menu.my_result'), '1', <TrophyFilled />, null, "/"),
         getItem(t('menu.rating'), '2', <SignalFilled />, null, "/rating"),
@@ -91,7 +91,7 @@ const Home = () => {
                     </div>
                     <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
                 </Sider>
-                <Layout>
+                <Layout style={{overflowX:'scroll'}}>
                     <Header
                         style={{
                             padding: 0,
@@ -145,7 +145,7 @@ const Home = () => {
                             textAlign: 'center',
                         }}
                     >
-                        Welcome to my website
+                        Welcome to my platform
                     </Footer>
                 </Layout>
             </Layout>

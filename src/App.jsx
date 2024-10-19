@@ -1,12 +1,11 @@
 import Home from "./pages/home-page/Home.jsx";
 import './i18n.js'
-import SignUp from "./components/sign-up/SignUp.jsx";
+import Test from './components/quiz/Test.jsx'
 function App() {
 
     return (<div className={''}>
         <p className={''}>
             <Home/>
-
         </p>
 
     </div>)
