@@ -141,7 +141,6 @@ const Mathematics = () => {
         </Flex>
       )}
 
-      {/* Test komponenti, qiymatlarni props orqali uzatamiz */}
       {startTest && <Test testTime={testTime} testAmount={testAmount} />}
     </div>
   );

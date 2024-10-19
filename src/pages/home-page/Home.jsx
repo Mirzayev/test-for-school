@@ -108,7 +108,7 @@ const Home = () => {
                     >
                         <div
                             style={{
-                                padding: 24,
+                                padding: 10,
                                 minHeight: 360,
                                 background: colorBgContainer,
                                 borderRadius: borderRadiusLG,

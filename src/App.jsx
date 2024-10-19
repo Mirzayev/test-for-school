@@ -7,7 +7,6 @@ function App() {
         <p className={''}>
             <Home/>
         </p>
-
     </div>)
 }
 
