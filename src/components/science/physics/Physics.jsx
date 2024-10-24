@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Button, Flex, Table } from "antd";
+import PhysicsTest from "../../quiz/PhysicsTest"
 
 const columns = [
   {
@@ -11,33 +12,28 @@ const columns = [
 ];
 
 const theme = [
-  "Eng qadimgi tuzumdan sivilizatsiya sari",
-  "Qadimgi Sharq va O‘rta Osiyo",
-  "Qadimgi Yunoniston",
-  "Miloddan avvalgi VI - milodiy IV asrlarda O‘rta Osiyo",
-  "Qadimgi Rim",
-  "V-XI asrlarda Yevropa",
-  "VI- X asrlarda Osiyo xalqlari",
-  "O‘rta asrlarda ijtimoiy- siyosiy, iqtisodiy va madaniy hayot",
-  "O‘rta Osiyoning Arab xalifalari tomonidan fath etilishi. Xalq qo‘zg‘olonlari",
-  "Movarounnahrda mustaqil davlatlarning tashkil topishi. (IX- XIII asrlar)",
-  "IX- XIII asrlarda madaniy hayot",
-  "Vatanimiz xalqlarining Chingizxon istilosi va zulmiga qarshi ozodlik kurashi",
-  "Amir Temur davlati",
-  "Temuriylar saltanatida ijtimoiy-iqtisodiy va madaniy hayot",
-  "Industrial jamiyatning shakllanishi",
-  "O‘rta Osiyo davlatlarida madaniy hayot",
-  "XIX asr ikkinchi yarmi- XX asr boshlarida qoraqalpoqlar",
-  "1929-1933-yillardagi jahon iqtisodiy inqirozi",
-  "Sharqiy Yevropa va Bolqon davlatlari ikkita jahon urushi oralig‘ida",
-  "1918-1939- yillarda Osiyo davlatlarining iqtisodiy va siyosiy rivojlanishi",
-  "Siyosiy islohotlar. Milliy mustaqillikning barpo etilishi",
-  "O‘zbekiston tarkibida suveren Qoraqalpog‘iston",
-  "Demokratik fuqarolik jamiyatini shakllanishi",
-  "O‘zbekiston taraqqiyotining ijtimoiy-siyosiy aspektlari",
-  "Iqtisodiy islohotlar. Bozor iqtisodiyotiga o‘tish",
-  "O‘zbekistonda ta’lim va madaniyat",
-  "O‘zbekistonni xalqaro hamjamiyatga kirishi"
+  "To‘g‘ri chiziqli harakat. Moddiy nuqta. Vektor kattaliklar. Sanoq sistemasi. Kuch birliklari",
+ "To‘g‘ri chiziqli tekis harakat. O‘rtacha tezlik. Yo‘l. Tezlik",
+ "Tekis tezlanuvchan va tekis sekinlanuvchan harakat. Tezlanish. Yo‘l. Tezlik",
+ "Harakat nisbiyligi",
+ "Aylana bo‘ylab tekis harakat",
+ "Qattiq jismlar bosimi",
+ "Arximed qonuni",
+ "Paskal qonuni",
+ "Gidrostatik bosim",
+ "Atmosfera bosimi",
+ "Yadro reaksiyalari. Energetik chiqish. Zanjir reaksiyalar",
+ "Yadroning bog‘lanish energiyasi",
+ "Zarralarni registratsiya qilish asboblari. Radioaktiv yemirilish. Yarim yemirilish davri",
+ "Rezerford- Bor atom modeli",
+ "Fotoeffekt. Foton. Yorug‘lik bosimi",
+ "Nurlanish va spektrlar",
+ "Nisbiylik nazariyasi",
+ "Dispersiya. Interferensiya. Difraksiya. Polyarizatsiya",
+ "Yorug‘lik tezligi. Yorug‘lik to‘lqini",
+ "Fotometriya",
+ "Linzalar.Ko'z.Optika",
+ "Sinish qaytish qonunlari. Yassi ko'zgu. To'la qaytish"
 ];
 
 const dataSource = theme.map((name, i) => ({
@@ -48,6 +44,9 @@ const dataSource = theme.map((name, i) => ({
 const Physics = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [testTime, setTestTime] = useState(20)
+  const [testAmount, setTestAmount] = useState(10)
+  const [startTest, setStartTest] = useState(false)
 
   const start = () => {
     setLoading(true);
@@ -62,6 +61,11 @@ const Physics = () => {
     setSelectedRowKeys(newSelectedRowKeys);
   };
 
+  const handleStartTest = () => {
+
+    setStartTest(true)
+  }
+
   const rowSelection = {
     selectedRowKeys,
     onChange: onSelectChange,
@@ -70,7 +74,9 @@ const Physics = () => {
   const hasSelected = selectedRowKeys.length > 0;
 
   return (
-    <Flex gap="middle" vertical>
+   <div>
+
+{!startTest &&  <Flex gap="middle" vertical>
         <h2 className=" flex justify-center my-3 text-2xl font-bold text-center">Fizika fanidan testlar</h2>
       <Flex align="center" gap="middle">
         <Button
@@ -93,26 +99,35 @@ const Physics = () => {
      
       <div className="border-[1px]  rounded-md p-3 mt-4 bg-slate-100">
       <p className="font-bold">Savollar soni</p>
-       <select className="block my-2 w-full border py-2 rounded-md px-1" name="" id="">
-        <option value="">10</option>
-        <option value="">20</option>
-        <option value="">30</option>
+       <select className="block my-2 w-full border py-2 rounded-md px-1" name="" id=""
+       value={testAmount}
+       onChange={(e) => setTestAmount(e.target.value)}
+       >
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
        </select>
        <p className="font-bold">Umumiy vaqt </p>
-       <select className="block my-2 w-full border py-2  rounded-md px-1" name="" id="">
-        <option value="">20</option>
-        <option value="">30</option>
-        <option value="">40</option>
-        <option value="">50</option>
-        <option value="">60</option>
+       <select className="block my-2 w-full border py-2  rounded-md px-1" name="" id=""
+       value={testTime}
+       onChange={(e) => setTestTime(e.target.value)}>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+        <option value="60">60</option>
        </select>
-      <div className="flex justify-center">
+      <div className="" onClick={handleStartTest}>
       <Button className="">
         Boshlash
       </Button>
       </div>
       </div>
-    </Flex>
+    </Flex>}
+
+    {startTest && <PhysicsTest testAmount={testAmount} testTime={testTime}  />}
+
+   </div>
   );
 };
 

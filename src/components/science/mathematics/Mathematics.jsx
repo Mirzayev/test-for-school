@@ -1,4 +1,4 @@
-import Test from "../../quiz/Test";
+import Test from "../../quiz/MathTest";
 import React, { useState } from "react";
 import { Button, Flex, Table } from "antd";
 

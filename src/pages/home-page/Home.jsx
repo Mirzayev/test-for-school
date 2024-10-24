@@ -72,8 +72,8 @@ const Home = () => {
             getItem(t('menu.history'), '7', null, null, "/history"),
         ]),
         getItem(t('menu.about'), '13', <ExclamationCircleFilled />, null, "/about"),
-        getItem(t('menu.setting'), '9', <SettingFilled />, null, "/settings"),
-        getItem(t('menu.createTest'), '10', <FolderAddOutlined />, null, "/help"),
+        // getItem(t('menu.setting'), '9', <SettingFilled />, null, "/settings"),
+        // getItem(t('menu.createTest'), '10', <FolderAddOutlined />, null, "/help"),
         getItem(t('menu.news'), '11', <FileProtectOutlined />, null, "/news"),
         getItem(t('menu.logout'), '12', <LogoutOutlined />, null, "#", handleLogout), // Logout tugmasi uchun hodisa
     ];

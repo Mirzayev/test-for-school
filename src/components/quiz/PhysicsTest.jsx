@@ -1,7 +1,9 @@
+
 import { useState, useEffect } from 'react';
 import { Button, Radio, Progress } from 'antd';
+// import Physics from '../science/physics/Physics';
 
-const Test = (props) => {
+const PhysicsTest = (props) => {
     const questions = [
         { id: 1, question: "a va b natural sonlar uchun a · b = 30 bo‘lsa, a + 2b − 1 ifodaning eng kichik qiymatini toping.?", options: [16, 15, 12, 31], correctAnswer: 16 },
         { id: 2, question: "Hisoblang: 7, 2 (1) − 4, 4 (2) + 31/90", options: ["3.1(3)", "3.1(2)", "2.1(3)", "2.1(1)"], correctAnswer: "2.1(3)" },
@@ -35,6 +37,7 @@ const Test = (props) => {
         { id: 31, question: "Hisoblang: 7, 2 (1) − 4, 4 (2) + 31/90", options: ["3.1(3)", "3.1(2)", "2.1(3)", "2.1(1)"], correctAnswer: "2.1(3)" },
         { id: 32, question: "Do‘kon 3 kunda jami 175 kg kartoshka sotdi. Agar ikkinchi kun uchinchi kunga nisbatan 1,5 marta ko‘p birinchi kun esa ikkinchi kunga nisbatan 2,4 marta kam kartoshka sotgan bo‘lsa, do‘kon birinchi kun necha kilogramm kartoshka sotgan?", options: [35, 44, 56, 27], correctAnswer: 56 },
         { id: 33, question: "What is 110 / 2", options: [50, 52, 51, 55], correctAnswer: 55 },
+        {id:34, question: "Hisoblang 45*23/(45-13)" , options: [40, 42, 43, 45], correctAnswer: 42}
       ];
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -86,18 +89,19 @@ const Test = (props) => {
 
     const handleSubmit = () => {
         let correctAnswers = 0;
-        questions.forEach((t) => {
-            if (selectedAnswers[t.id] === q.correctAnswer) {
+        questions.forEach((q) => {
+            if (selectedAnswers[q.id] === q.correctAnswer) {
                 correctAnswers++;
             }
         });
         setScore(correctAnswers);
         setSubmitted(true);
     };
+    
 
     return (
         <div className='shadow-md px-4 lg:px-10 pb-[100px] border rounded-lg' style={{ maxWidth: '600px', margin: '0 auto', }}>
-            <h2 className={'flex justify-center font-bold text-xl my-4'}>Test Solver</h2>
+            <h2 className={'flex justify-center font-bold text-xl my-4'}>Fizika</h2>
             <Progress percent={(100 * timeLeft) / (props.testTime * 60)} showInfo={false} />
             <p style={{ fontWeight: 'bold', fontSize: '18px' }}>Time Left: {timeLeft} seconds</p>
 
@@ -141,7 +145,8 @@ const Test = (props) => {
             ) : (
                 <div style={{ textAlign: 'center' }}>
                     <h3 className={'font-semibold text-lg my-2'}>Test Yakunlandi!</h3>
-                    <p className={'font-semibold text-lg '}>Sizning natijangiz:  {(score / questions.length) * 100}%</p>
+                    <h4 className='font-bold'>{score}/{props.testAmount}</h4>
+                    <p className={'font-semibold text-lg '}>Sizning natijangiz:  {(score / props.testAmount) * 100}%</p>
                     <Button className='mt-4' onClick={Restart}>
                        Testni qayta ishlash
                        <i class="fa-solid fa-rotate-left"></i>
@@ -152,4 +157,4 @@ const Test = (props) => {
     );
 };
 
-export default Test;
+export default PhysicsTest;
