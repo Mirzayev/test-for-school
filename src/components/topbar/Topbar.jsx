@@ -6,7 +6,8 @@ import "../../i18n.js";
 import { useState } from "react";
 import Profil from "../profil-setting/Profil.jsx";
 
-export default function Topbar() {
+export default function 
+Topbar() {
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
@@ -27,7 +28,7 @@ export default function Topbar() {
         }
       >
         <div>
-          <h3 className={"text-[20px] font-semibold hidden md:block"}>
+          <h3 className={"text-[20px] font-bold hidden md:block"}>
             {t("menu.test-solving")}
           </h3>
         </div>

@@ -1,12 +1,15 @@
-import Home from "./pages/home-page/Home.jsx";
-import './i18n.js'
-function App() {
+import { useState } from "react";
+import Home from "./pages/home-page/Home";
+import "./i18n.js";
 
-    return (<div className={''}>
-        <p className={''}>
-            <Home/>
-        </p>
-    </div>)
+function App() {
+ 
+
+  return (
+    <div className="App">
+    <Home/> 
+    </div>
+  );
 }
 
-export default App
+export default App;

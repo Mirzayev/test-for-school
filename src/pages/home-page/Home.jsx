@@ -54,7 +54,6 @@ const Home = () => {
 
     const handleOk = () => {
         // Logout funksiyasini shu yerda bajarish (masalan, sesiyani to'xtatish)
-        console.log("Logged out");
         setVisible(false); // Modalni yopish
     };
 
@@ -75,7 +74,8 @@ const Home = () => {
         // getItem(t('menu.setting'), '9', <SettingFilled />, null, "/settings"),
         // getItem(t('menu.createTest'), '10', <FolderAddOutlined />, null, "/help"),
         getItem(t('menu.news'), '11', <FileProtectOutlined />, null, "/news"),
-        getItem(t('menu.logout'), '12', <LogoutOutlined />, null, "#", handleLogout), // Logout tugmasi uchun hodisa
+        getItem(t('menu.logout'), '12', <LogoutOutlined />, null, "#", handleLogout), 
+        
     ];
 
     return (
